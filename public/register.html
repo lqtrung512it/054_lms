@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>054 LMS - Register</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img//favicon-16x16.png">
+    <link rel="manifest" href="/assets/img//site.webmanifest">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,500&display=swap&subset=vietnamese"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/assets/fonts/fontawesome-free-6.2.1-web/css/all.min.css">
+
+</head>
+
+<body>
+    <div id="main">
+        <div id="header">
+            <div class="grid">
+
+                <nav class="header__navbar">
+                    <!--Begin: Nav-Logo-->
+                    <ul class="header__navbar-list header__navbar-logo">
+                        <li class="header__navbar-item header__navbar-logo-img">
+                            <a href="/index.html" class="header__navbar-item-link ">
+                                <img src="/assets/img/logo.png" alt="Logo">
+                            </a>
+                        </li>
+                    </ul>
+                    <!--End: Nav-Logo-->
+
+
+                    <!--Begin: Nav-Search-->
+                    <ul class="header__navbar-list header__navbar-search">
+                        <div class="header__navbar-search">
+                            <li class="header__navbar-item">
+                                <i
+                                    class="fa-solid fa-magnifying-glass header__navbar-item-link header__navbar-search-logo"></i>
+                            </li>
+                            <li class="header__navbar-item">
+                                <input type="search" class="header__navbar-item-link header__navbar-search-input"
+                                    placeholder="Enter ID, Courses, Classes,..."></input>
+                            </li>
+                        </div>
+                    </ul>
+                    <!--End: Nav-Search-->
+
+
+                    <!--Begin: Nav-Action-notLoged-->
+                    <ul class="header__navbar-list header__navbar-action-notLogged" style="display: block;">
+                        <li class="header__navbar-item">
+                            <a href="/register.html" class="header__navbar-item-link">Register</a>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="/login.html" class="header__navbar-item-link">Login</a>
+                        </li>
+                    </ul>
+                    <!--End: Nav-Action-notLogged-->
+                </nav>
+            </div>
+        </div>
+
+        <div id="content">
+            <div class="grid">
+                <div class="grid__row">
+                    <!--Begin: Category-->
+                    <div class="grid__column-2">
+                        <nav class="content__category">
+                            <ul class="content__category-list">
+                                <li class="content__catergory-item">
+                                    <i class="fa-sharp fa-solid fa-house content__catergory-item-icon"></i>
+                                    <a href="/index.html" class="content__catergory-item-link">HomePage</a>
+                                </li>
+                                <li class="content__catergory-item">
+                                    <i class="fa-solid fa-book content__catergory-item-icon"></i>
+                                    <a href="/allcourses.html" class="content__catergory-item-link">All
+                                        Courses</a>
+                                </li>
+                                <li class="content__catergory-item">
+                                    <i class="fa-solid fa-bookmark content__catergory-item-icon"></i>
+                                    <a href="/mycourses.html" class="content__catergory-item-link">My Courses</a>
+                                </li>
+                                <li class="content__catergory-item">
+                                    <i class="fa-solid fa-dumbbell content__catergory-item-icon"></i>
+                                    <a href="/coursepage.html" class="content__catergory-item-link">Course</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!--End: Category-->
+
+
+                    <!--Begin: Content-->
+                    <div class="grid__column-10 content__register">
+                        <form class="content__register-container form" id="form-1">
+                            <div class="content__register-header">
+                                <h3 class="content__register-form-heading">Register</h3>
+                                <a href="/login.html"
+                                    class="content__btn content__register-form-switch-btn">Login</a>
+                            </div>
+
+                            <div class="content__register-form">
+                                <div class="content__register-group">
+                                    <label for="fullname" class="form-label">Your Full Name</label>
+                                    <br>
+                                    <input type="text" id="fullname" name="fullname" placeholder="Eg: Le Quang Trung"
+                                        class="content__register-input">
+                                    <br>
+                                    <span class="form-message"></span>
+                                </div>
+
+                                <div class="content__register-group">
+                                    <label for="email" class="form-label">Your Email</label>
+                                    <br>
+                                    <input type="text" id="email" name="email" placeholder="Eg: email@domain.com"
+                                        class="content__register-input">
+                                    <br>
+                                    <span class="form-message"></span>
+                                </div>
+
+                                <div class="content__register-group">
+                                    <label for="username" class="form-label">Your Username</label>
+                                    <br>
+                                    <input type="text" id="username" name="username" placeholder="Enter Username"
+                                        class="content__register-input">
+                                    <br>
+                                    <span class="form-message"></span>
+                                </div>
+
+                                <div class="content__register-group">
+                                    <label for="password1" class="form-label">Your Password</label>
+                                    <br>
+                                    <input type="password" id="password1" name="password1" placeholder="Enter Password"
+                                        class="content__register-input">
+                                    <br>
+                                    <span class="form-message"></span>
+                                </div>
+
+                                <div class="content__register-group">
+                                    <label for="password2" class="form-label">Your Password Again</label>
+                                    <br>
+                                    <input type="password" id="password2" name="password2"
+                                        placeholder="Enter Password Again  " class="content__register-input">
+                                    <br>
+                                    <span class="form-message"></span>
+                                </div>
+                            </div>
+
+                            <div class="content__register-controls">
+                                <a href="/index.html" class="content__btn ">Back</a>
+                                <button type="submit" id="submit_register" class="content__btn content__btn--primary">Sign Up</button>
+                            </div>
+
+                            <h2 id = "message" style="color:red"></h2>
+                        </form>
+                    </div>
+
+                  
+                    <script src="/validator.js"></script>
+                    <script>
+                        Validator({
+                            form: '#form-1',
+                            errorSelector: '.form-message',
+                            rules: [
+                                Validator.isRequired('#fullname', 'This field is required'),
+                                Validator.isRequired('#email', 'This field is required'),
+                                Validator.isRequired('#username', 'This field is required'),
+                                Validator.isRequired('#password1', 'This field is required'),
+                                Validator.isRequired('#password2', 'This field is required'),
+
+                                Validator.isUsername('#username'),
+                                Validator.isEmail('#email', 'Please enter your correct email form'),
+                                Validator.minLength('#username', 6),
+                                Validator.isPassword('#password1'),
+                                Validator.isConfirmed('#password2', function () {
+                                    return document.querySelector('#form-1 #password1').value;
+                                }, 'Please re-enter above password'),
+                            ],
+
+                        })
+                    </script>
+
+                    <script>
+                        document.getElementById('submit_register').addEventListener('click', event => {
+                            event.preventDefault();
+                            let fullname = document.getElementById("fullname").value;
+                            let email = document.getElementById("email").value;
+                            let username = document.getElementById("username").value;
+                            let password = document.getElementById("password1").value;
+                            let request = {
+                                fullname : fullname,
+                                email: email,
+                                username: username,
+                                password: password,
+                            }
+                        
+                            fetch('/api/register', {
+                                method: 'POST',
+                                headers:{
+                                    'Content-Type': 'application/json'
+                                },
+                                body: JSON.stringify(request),
+                                
+                            })
+                                .then(statusCheck)
+                                .then(res => res.json())
+                                .then(registerHandleProcess)
+                                .catch(e => console.log(e));
+                        });
+
+                        async function statusCheck(res) {
+                            if (!res.ok) {
+                                throw new Error(await res.text());
+                            }
+                            return res;
+                        }
+
+                        function registerHandleProcess(res) {
+                            document.querySelector('#message').innerHTML = res['message'];
+                       
+                            if (res['status']){
+                                var count = 3;
+                                var timer = setInterval(function() { 
+                                    handleTimer(count); 
+                                    
+                                    --count;
+                                    if(count == 0) {
+                                        clearInterval(timer);
+                                        location.href = '/login.html';
+                                    }
+                                }, 1000)
+                            }
+                        }
+
+                        function handleTimer(count) {
+                            document.querySelector('#message').innerHTML = `You're redirecting on ${count}`;
+                        }
+                    
+                    </script>
+                    <!--End: Content-->
+
+
+                </div>
+            </div>
+
+
+        </div>
+
+        <div id="footer">
+            <div>
+                © 2022 Copyright:
+                <a style="text-decoration: none;" href="https://www.facebook.com/profile.php?id=100010041219374">Le
+                    Quang Trung</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

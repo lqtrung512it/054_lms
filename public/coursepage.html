@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>054 LMS - Course Page</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img//favicon-16x16.png">
+    <link rel="manifest" href="/assets/img//site.webmanifest">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,500&display=swap&subset=vietnamese"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/assets/fonts/fontawesome-free-6.2.1-web/css/all.min.css">
+</head>
+
+<body>
+    <div id="main">
+        <div id="header">
+            <div class="grid">
+
+                <nav class="header__navbar">
+                    <!--Begin: Nav-Logo-->
+                    <ul class="header__navbar-list header__navbar-logo">
+                        <li class="header__navbar-item header__navbar-logo-img">
+                            <a href="/index.html" class="header__navbar-item-link ">
+                                <img src="/assets/img/logo.png" alt="Logo">
+                            </a>
+                        </li>
+                    </ul>
+                    <!--End: Nav-Logo-->
+
+
+                    <!--Begin: Nav-Search-->
+                    <ul class="header__navbar-list header__navbar-search">
+                        <div class="header__navbar-search">
+                            <li class="header__navbar-item">
+                                <i
+                                    class="fa-solid fa-magnifying-glass header__navbar-item-link header__navbar-search-logo"></i>
+                            </li>
+                            <li class="header__navbar-item">
+                                <input type="search" class="header__navbar-item-link header__navbar-search-input"
+                                    placeholder="Enter ID, Courses, Classes,..."></input>
+                            </li>
+                        </div>
+                    </ul>
+                    <!--End: Nav-Search-->
+
+
+                   
+
+                    <!--Begin: Nav-Action-hasLogged-->
+                    <ul class="header__navbar-list" id="header__navbar-action-hasLogged">
+                        <li class="header__navbar-item">
+                            <a href="" id="header__username" class="header__navbar-item-link"></a>
+                            <ul class="header__navbar-subnav">
+                                <li><a href="/index.html" id="header__logout" class="header__navbar-item-link">Log
+                                        Out</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="" class="header__navbar-item-link">
+                                <i class="fa-solid fa-user header__navbar-item-link header__navbar-action-avatar"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!--End: Nav-Action-hasLogged-->
+                </nav>
+            </div>
+        </div>
+
+        <div id="content">
+            <div class="grid">
+                <div class="grid__row">
+                    <!--Begin: Category-->
+                    <div class="grid__column-2">
+                        <nav class="content__category">
+                            <ul class="content__category-list">
+                                <li class="content__catergory-item">
+                                    <i class="fa-sharp fa-solid fa-house content__catergory-item-icon"></i>
+                                    <a href="/index.html" class="content__catergory-item-link">HomePage</a>
+                                </li>
+                                <li class="content__catergory-item">
+                                    <i class="fa-solid fa-book content__catergory-item-icon"></i>
+                                    <a href="/allcourses.html" class="content__catergory-item-link">All
+                                        Courses</a>
+                                </li>
+                                <li class="content__catergory-item">
+                                    <i class="fa-solid fa-bookmark content__catergory-item-icon"></i>
+                                    <a href="/mycourses.html" class="content__catergory-item-link">My Courses</a>
+                                </li>
+                                <li class="content__catergory-item" style="background-color: rgba(0, 0, 0, 0.05);">
+                                    <i class="fa-solid fa-dumbbell content__catergory-item-icon"></i>
+                                    <a href="/coursepage.html" class="content__catergory-item-link">Course</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!--End: Category-->
+
+
+                    <!--Begin: Content-->
+                    <div class="grid__column-10">
+                        <div class="content__course-page">
+
+
+                            <div class="content__quizzes-container">
+                                <div class="grid__row">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <script>
+                        window.addEventListener("load", event => {
+                            event.preventDefault();
+                            if (!document.cookie.match(/user-name=[0-9a-zA-Z]*/)) {
+                                console.log('error')
+                                alert('You must login before access Course page!');
+                                alert('You are directing to Login page after 3 seconds');
+                                setTimeout(() => {
+                                    window.location.href = '/login.html'
+                                }, 3000)
+                            } else if (!document.cookie.match(/course-id=[0-9a-zA-Z]*/)){
+                                console.log('error')
+                                alert('You must choose a course before access Course page!');
+                                alert('You are dicrecting to My Course page after a second');
+                                setTimeout(() => {
+                                    window.location.href = '/mycourses.html'
+                                }, 1000)
+                            } else {
+                                let usernameCookie = document.cookie.match(/user-name=[0-9a-zA-Z]*/)[0];
+                                let username = usernameCookie.match(/[0-9a-zA-Z]*$/)[0];
+                                document.querySelector('#header__username').innerHTML = `${username}`;
+
+                                let courseIDCookie = document.cookie.match(/course-id=[0-9]*/)[0];
+                                let courseID = courseIDCookie.match(/[0-9]*$/)[0];
+
+                                fetch(`/api/course/${courseID}/quizes`, {
+                                    method: 'GET',
+                                    headers: {
+                                        'Content-Type': 'application/json'
+                                    }
+                                })
+                                    .then(statusCheck)
+                                    .then(res => res.json())
+                                    .then(coursePageHandleProcess)
+                                    .catch(e => console.log(e))
+                            }
+                        })
+
+                        async function statusCheck(res) {
+                            if (!res.ok) {
+                                throw new Error(await res.text());
+                            }
+                            return res;
+                        }
+
+                        function coursePageHandleProcess(res) {
+                            const courseName = `
+                                                <h1 class="content__course-page-heading">${res[res.length - 1].CourseName}</h1>
+                                                `
+                            document.querySelector('.content__course-page').insertAdjacentHTML('afterBegin', courseName);
+
+                            for (let index = 0; index < res.length - 1; index++) {
+                                const markup = `
+                                <div class="grid__column-2-4">
+                                        <div class="content__quiz-block">
+                                            <div class="content__quiz-thumb">
+                                                <div class="content__quiz-thumb-description">
+                                                    <span class="content__quiz-thumb-text">${res[index].QuizName}</span>
+                                                </div>
+                                            </div>
+                                        
+                                            <div class="content__do-quiz">
+                                                <button class="content__quiz-id${res[index].QuizID}">Do quiz</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                `
+                                document.querySelector('.content__quizzes-container .grid__row').insertAdjacentHTML('afterBegin', markup);
+
+                            }
+
+                            let buttons = document.querySelector('.content__quizzes-container .grid__row ').getElementsByTagName('button');
+                            for (let i = 0; i < buttons.length; i++) {
+                                buttons[i].addEventListener('click', event => {
+                                    event.preventDefault();
+                                    let quizID = buttons[i].getAttribute('class').match(/\d*$/)[0];
+                                    document.cookie = `quiz-id=${quizID}`
+
+                                    location.href = '/doquiz.html';
+                                })
+                            }
+
+
+                        }
+                    </script>
+
+                    <script>
+                        document.getElementById('header__logout').addEventListener('click', event => {
+                            event.preventDefault();
+
+                            document.cookie = 'user-name=; expires = Thu, 01 Jan 1970 00:00:00 GMT';
+                            document.cookie = 'course-id=; expires = Thu, 01 Jan 1970 00:00:00 GMT';
+                            document.cookie = 'quiz-id=; expires = Thu, 01 Jan 1970 00:00:00 GMT';
+
+                            alert("You will direct to Homepage after 3 sec.");
+                            setTimeout(() => {
+                                window.location.href = '/index.html'
+                            }, 3000)
+                        })
+                    </script>
+                    <!--End: Content-->
+
+                </div>
+            </div>
+
+
+        </div>
+
+        <div id="footer">
+            <div>
+                © 2022 Copyright:
+                <a style="text-decoration: none;" href="https://www.facebook.com/profile.php?id=100010041219374">Le
+                    Quang Trung</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

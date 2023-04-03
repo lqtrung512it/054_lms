@@ -1,0 +1,519 @@
+#main {
+
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--header-height);
+    background-image: var(--transform-color);
+}
+
+.header__navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__navbar-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.header__navbar-item {
+    display: inline-block;
+}
+
+.header__navbar-list li a {
+    color: var(--text-color);
+    text-decoration: none;
+    line-height: var(--header-height);
+    margin: 0 0.2rem;
+    font-size: 1.6rem;
+}
+
+.header__navbar-logo-img img{
+    height: 5.2rem;
+    margin-top: 0.7rem;
+    border-radius: 0.8rem;
+    margin-left: 7.2rem;
+}
+
+.header__navbar-search {
+    flex: 0.4;
+}
+
+div.header__navbar-search {
+    margin-top: 1.7rem;
+    display: flex;
+    align-items: center;
+    height: 3.2rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 1.2rem;
+}
+
+div.header__navbar-search .header__navbar-item{
+    margin: 0 0.8rem;
+} 
+
+.header__navbar-search i {
+    font-size: 2.0rem;
+}
+
+.header__navbar-search-input {
+    width: 200%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    background-color: rgba(255, 255, 255, 0.0);
+}
+
+#header__navbar-action-notLogged {
+    display: block;
+}
+
+#header__navbar-action-hasLogged{
+    display: block;
+}
+
+#header__navbar-action-notLogged > li {
+    display: inline-block;
+    position: relative;
+    margin: 0 1.2rem;
+}
+
+#header__navbar-action-notLogged > li > a {
+    padding: 0.8rem;
+    border: solid 0.2rem rgba(255, 255, 255, 0.2);
+    border-radius: 1.2rem;
+    
+}
+
+#header__navbar-action-notLogged > li:hover > a {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#header__navbar-action-hasLogged > li {
+    display: inline-block;
+    position: relative;
+    margin: 0 0.8rem;
+}
+
+#header__navbar-action-hasLogged .header__navbar-subnav {
+    display: none;
+    position: absolute;
+    top: calc(0.75 * var(--header-height));
+    padding: 0;
+    background-color: var(--white-color);
+    list-style: none;
+    box-shadow: 0 0 1.0rem rgba(0, 0, 0, 0.3);
+    border-radius: 0.4rem;
+}
+
+#header__navbar-action-hasLogged .header__navbar-subnav a {
+    line-height: 2.4rem;
+    padding: 0.4rem;
+}
+
+#header__navbar-action-hasLogged .header__navbar-item:hover .header__navbar-subnav {
+    display: block;
+} 
+
+.header__navbar-action-avatar {
+    font-size: 3.2rem;
+}
+
+#content {
+    min-height: calc(100vh - var(--header-height) - var(--footer-height));
+    margin-top: var(--header-height);
+    margin-bottom: var(--footer-height);
+}
+
+.grid__column-2 .content__category-list {
+    list-style: none;
+    font-size: 1.6rem;
+    padding: 0;
+
+}
+
+.grid__column-2 .content__catergory-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.8rem 0.8rem 3.2rem;
+    padding: 0.8rem;
+    border-radius: 1.2rem;  
+}
+
+.grid__column-2 .content__catergory-item-icon {
+    height: 3.2rem;
+    width: 3.2rem;
+    font-size: 2.4rem;
+    text-align: center;
+    margin: 0 1.2rem;
+}
+
+.grid__column-2 .content__catergory-item-link {
+    text-decoration: none;
+    line-height: 1.8rem;
+}
+
+.grid__column-2 .content__catergory-item{
+    cursor: pointer;
+}
+
+.grid__column-10 {
+    margin-top: 1.2rem;
+    border-radius: 0.4rem;
+    border: solid 0.1rem var(--text-color);
+    background-color: rgba(0, 0, 0, 0.02);
+    color: var(--text-color);
+}
+
+.content__register,
+.content__login {
+   text-align: center;
+   
+}
+
+.content__register-container,
+.content__login-container {
+    width: 100%;
+}
+
+.content__register-header,
+.content__login-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.content__register-form-heading,
+.content__login-form-heading {
+    font-size: 3.2rem;
+}
+
+.form-label {
+    font-weight: bold;
+    
+}
+.content__btn {
+    text-decoration: none;
+    background-color: #ccc;
+    border: none;
+    min-width: 10rem;
+    font-size: 1.6rem;
+    padding: 0.4rem 1.6rem;
+    border-radius: 1.6rem;
+    cursor: pointer;
+}
+
+.content__btn:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.content__register-form-switch-btn,
+.content__login-form-switch-btn,
+.content__btn--primary {
+    background-color: rgb(250, 128, 114);
+}
+
+.content__register-form-switch-btn:hover,
+.content__login-form-switch-btn:hover,
+.content__btn--primary:hover {
+    background-color: rgba(250, 128, 114, 0.5);
+}
+
+.content__register-group,
+.content__login-group {
+    margin: 1.6rem 0.8rem;
+    font-size: 1.4rem;
+}
+
+.content__register-group .invalid input,
+.content__login-group .invalid input {
+    border-color: red 0.1rem;
+}
+
+.content__register-controls .content__btn,
+.content__login-controls .content__btn {
+    margin: 3.2rem;
+}
+
+.content__register-input,
+.content__login-input {
+    width: 20%;
+    padding: 0.8rem;
+    border: rgba(255, 255, 255, 0.2);
+    border-radius: 1.2rem;
+}
+
+.invalid .content__register-input,
+.invalid .content__login-input {
+    border: solid red 0.1rem;
+}
+
+.invalid .form-message{
+    color: red;
+}
+
+
+.content__btn--disabled {
+    color: #ccc;
+    cursor: default;
+    background-color: darkgray;
+}
+
+.content__anoucement {
+    color: var(--text-color);
+}
+
+.content__anouncement-post,
+.content__question {
+    min-height: 10rem;
+    width: 100%;
+    border: 0.1rem black solid;
+    border-radius: 0.4rem;
+    margin: 0 0 0.8rem;
+}
+
+.content__anouncement-post-heading {
+    margin: 0.8rem;
+    height: 6rem;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 0.4rem;
+}
+
+.content__anouncement-post-heading-icon,
+.content__question-number {
+    margin: 0.8rem 1.6rem;
+}
+
+.fa-circle-user {
+    font-size: 4.4rem;
+}
+
+.content__anouncement-post-heading-description {
+    margin: 0.4rem 0;
+}
+
+.content__anouncement-post-item {
+    margin: 0.8rem 0;
+}
+
+.content__anouncement-post-title {
+    font-size: 2.0rem;
+    font-weight: bold;
+}
+
+.content__anouncement-post-detail {
+    display: flex;
+    font-size: 1.2rem;
+}
+
+.content__anouncement-post-author,
+.content__anouncement-post-date {
+    text-decoration: none;
+    margin: 0 0.4rem;
+    color:slateblue;
+}
+
+.content__anoucement-post-description {
+    margin: 0 1.6rem;
+    font-size: 1.3rem;
+}
+
+.content__anouncement-post-comment,
+.content__course-enroll,
+.content__course-unenroll,
+.content__course-details,
+.content__do-quiz {
+    margin: 0.8rem 1.6rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.content__anouncement-post-comment a,
+.content__course-enroll button,
+.content__course-unenroll button,
+.content__course-details a,
+.content__do-quiz button {
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0.4rem 0.8rem;
+    border: 0.1rem solid black;
+    border-radius: 0.4rem;
+    background-color:skyblue;
+    color: var(--text-color);
+}
+
+.content__anouncement-post-comment a:hover,
+.content__course-enroll button:hover,
+.content__course-details a:hover,
+.content__do-quiz button:hover {
+    background-color: rgba(61, 241, 244, 0.5);
+}
+
+.content__course-unenroll button {
+    background-color:rgb(255, 99, 71);
+}
+.content__course-unenroll button:hover {
+    background-color: rgba(255, 99, 71, 0.8);
+}
+
+.grid__column-2-4 {
+    margin: 0 0 0.8rem;
+}
+
+.content__course,
+.content__quiz-block {
+    min-width: 20%;
+    min-height: 20rem;
+    border: 0.2rem solid snow;
+    border-radius: 0.8rem;
+}
+
+.content__course:hover,
+.content__quiz-block:hover {
+    box-shadow: 0 0 1.0rem rgba(0, 0, 0, 0.3);
+}
+
+.content__course-thumb,
+.content__quiz-thumb {
+    position: relative;
+    min-height: 12rem;
+    border: #ccc 0.1rem solid;
+    background-image: var(--transform-color);
+    cursor: pointer;
+    margin: 0 0 0.8rem 0;
+}
+
+.content__course-thumb-description,
+.content__quiz-thumb-description {
+    position: absolute;
+    text-align: center;
+    right: 0;
+    left: 0;
+    line-height: 12rem;
+}
+
+.content__course-thumb-text,
+.content__quiz-thumb-text,
+.content__course-name,
+.content__quiz-name {
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.content__course-name,
+.content__quiz-name,
+.content__course-participants,
+.content__quiz-participants{
+    margin: 0.8rem;
+}
+
+.content__course-participants,
+.content__quiz-participants {
+    display: flex;
+    min-height: 1.6rem;
+}
+
+.fa-users {
+    padding: 0.3rem 0;
+}
+
+.content__course-participants-number,
+.content__quiz-participants-number {
+    margin: 0 0.8rem;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+}
+
+.content__question-heading {
+    margin: 0.8rem;
+    min-height: 4rem;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 0.4rem;
+}
+
+.content__question-number,
+.content__question-number div {
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+.content__question-number {
+    border-radius: 100%;
+    border: 0.1rem solid;
+    text-align: center;
+    background-color:turquoise;
+}
+
+.content__question-number div {  
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+    
+}
+
+.content__question-text {
+    margin-top: 0.8rem;
+    line-height: 2.4rem;
+    font-size: 2rem;
+}
+
+.content__question-answer {
+    margin-left: 3rem;
+    list-style: none;
+}
+
+.content__question-choice {
+    font-size: 1.6rem;
+    margin: 0.8rem;
+}
+
+#content__question-submit {
+    text-align: center;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 0.1rem solid #ccc;
+    text-align: left;
+    padding: 0.8rem;
+    font-size: 1.4rem;
+}
+
+tr:nth-child(odd) {
+    background-color: #fff7f7;
+}
+
+tr:nth-child(even) {
+    background-color: #fff;
+}
+
+#footer {
+    position: fixed;
+    text-align: center;
+    font-size: 1.6rem;
+    height: var(--footer-height);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    line-height: 2.0rem ;
+    height: var(--header-height) / 1.5;
+    background-image: var(--transform-color);
+}
+
+
